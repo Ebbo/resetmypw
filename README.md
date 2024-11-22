@@ -11,9 +11,6 @@ Easily reset a forgotten password on your Linux system using this script! Design
 - **Non-Interactive Mode**: Quickly reset passwords via a terminal.
 - **Auto Partition Detection**: Automatically lists available system partitions.
 - **Reboot Option**: Prompts to reboot after completing the process.
-- **Argument Support**:
-  - `-h`: Display help.
-  - `-n`: Launch non-interactive mode.
 
 ---
 
@@ -22,7 +19,7 @@ Easily reset a forgotten password on your Linux system using this script! Design
 Run the script directly using `curl`:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/your-username/resetmypw/main/resetmypw.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/ebbo/resetmypw/main/resetmypw.sh | sudo bash
 ```
 
 > **⚠️ Important:** Ensure the script source is trusted before executing it.
