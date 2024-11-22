@@ -53,7 +53,7 @@ This repository contains a **Bash script** to recover and reset a forgotten user
 You can run the script directly without cloning the repository:
 
 ```bash
-curl tbd
+curl -fsSL https://raw.githubusercontent.com/Ebbo/resetmypw/master/resetmypw.sh | sudo bash
 ```
 
 > ⚠️ **Note**: Only execute scripts from trusted and verified sources.
