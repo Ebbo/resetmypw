@@ -1,107 +1,81 @@
-# resetmypw
 
-This repository contains a **Bash script** to recover and reset a forgotten user password on a Linux system. The script is designed to be run from a **live Linux environment** and automates the process of mounting the system's disk, selecting a user, and resetting their password.
+# 🔐 Password Recovery Script
 
----
-
-## Features
-
-- **Partition Detection**: Automatically detects available partitions and prompts for selection.
-- **User Listing**: Lists valid system users (UID ≥ 1000) for selection.
-- **Password Reset**: Allows setting a new password for the selected user.
-- **Cleanup**: Unmounts the disk and removes temporary directories after execution.
+Easily reset a forgotten password on your Linux system using this script! Designed for both **interactive** and **non-interactive** modes, this script guides you through mounting your system partition, selecting a user, and setting a new password.
 
 ---
 
-## How to Use
+## 🛠 Features
 
-### Prerequisites
-
-1. Boot into a **live Linux environment** (e.g., Ubuntu Live USB).
-2. Make sure the target disk is connected and accessible.
-
-### Steps
-
-1. Clone this repository or download the script:
-
-   ```bash
-   git clone https://github.com/your-username/password-recovery-script.git
-   cd password-recovery-script
-   ```
-
-2. Make the script executable:
-
-   ```bash
-   chmod +x reset_password.sh
-   ```
-
-3. Run the script as root:
-
-   ```bash
-   sudo ./reset_password.sh
-   ```
-
-4. Follow the prompts to:
-   - Select the target partition.
-   - Choose a user from the listed accounts.
-   - Set a new password for the selected user.
+- **Interactive Mode**: User-friendly menus for selecting partitions and users.
+- **Non-Interactive Mode**: Quickly reset passwords via a terminal.
+- **Auto Partition Detection**: Automatically lists available system partitions.
+- **Reboot Option**: Prompts to reboot after completing the process.
+- **Argument Support**:
+  - `-h`: Display help.
+  - `-n`: Launch non-interactive mode.
 
 ---
 
-## Quick Run with `curl`
+## 🚀 Quick Start
 
-You can run the script directly without cloning the repository:
+Run the script directly using `curl`:
 
 ```bash
-curl tbd
+curl -fsSL https://raw.githubusercontent.com/your-username/resetmypw/main/resetmypw.sh | sudo bash
 ```
 
-> ⚠️ **Note**: Only execute scripts from trusted and verified sources.
+> **⚠️ Important:** Ensure the script source is trusted before executing it.
 
 ---
 
-## Example Output
+## 📚 Usage
 
-```plaintext
-Starting user password recovery routine...
-Searching for available partitions...
-Found partitions:
-sda1
-sda2
-Please enter the partition to mount (e.g., sda1): sda2
-Partition successfully mounted at /mnt/recovery.
-Users on the system:
-john
-jane
-Please select a user: john
-Setting a new password for user john.
-Enter new UNIX password:
-Retype new UNIX password:
-passwd: password updated successfully
-Unmounting and cleaning up...
-Done. Password has been changed, and the system has been cleaned up.
+```bash
+sudo ./resetmypw.sh [OPTIONS]
 ```
 
----
-
-## Contribution
-
-Contributions are welcome! Feel free to fork this repository, make improvements, and submit a pull request.
-
----
-
-## License
-
-This project is licensed under the MIT License.
+### Options:
+| Option | Description                           |
+|--------|---------------------------------------|
+| `-h`   | Show help message and usage examples. |
+| `-n`   | Launch non-interactive mode directly. |
 
 ---
 
-## Disclaimer
+## 🔍 How It Works
 
-- This script is for recovery purposes and should be used responsibly.
-- Test in a safe environment before using it on production systems.
-- The script assumes the target disk has a standard Linux filesystem structure.
+1. **Partition Selection**:
+   - Detects and lists all available system partitions.
+   - In interactive mode, you select the correct partition.
+   - In non-interactive mode, you input the partition manually.
+
+2. **User Selection**:
+   - Reads valid user accounts from `/etc/passwd`.
+   - Interactive mode presents a clean menu for selection.
+   - Non-interactive mode requires manual username input.
+
+3. **Password Reset**:
+   - Prompts for a new password for the selected user.
+   - Ensures secure password entry.
+
+4. **Reboot Option**:
+   - After completing the process, you can choose to reboot or exit.
 
 ---
 
-For any issues, open an issue on the [GitHub repository](https://github.com/ebbo/resetmypw).
+## 📂 Contributing
+
+Contributions are welcome! Feel free to fork the repository, make improvements, and submit a pull request. 🤝
+
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+### ✨ Stay Connected
+
+🌟 If you find this project useful, consider starring the repository to show your support!
