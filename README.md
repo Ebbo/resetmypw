@@ -19,7 +19,7 @@ Easily reset a forgotten password on your Linux system using this script! Design
 Run the script directly using `curl`:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ebbo/resetmypw/master/resetmypw.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/ebbo/resetmypw/master/resetmypw.sh -o /tmp/resetmypw.sh && sudo bash /tmp/resetmypw.sh
 ```
 
 > **⚠️ Important:** Ensure the script source is trusted before executing it.
