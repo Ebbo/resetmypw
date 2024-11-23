@@ -5,6 +5,18 @@ Easily reset a forgotten password on your Linux system using this script! Design
 
 ---
 
+## 🖥 Prerequisites
+
+To reset a user's password, you'll need a **live USB stick** with a Linux distribution of your choice.
+
+### Create a Live USB Stick:
+1. Download [Ventoy](https://www.ventoy.net/en/download.html) to easily manage bootable USB drives.
+2. Install Ventoy on your USB stick.
+3. Add the ISO file of your preferred Linux distribution to the Ventoy drive.
+4. Boot from the USB stick on the system where you need to reset the password.
+
+---
+
 ## 🛠 Features
 
 - **Interactive Mode**: User-friendly menus for selecting partitions and users.
